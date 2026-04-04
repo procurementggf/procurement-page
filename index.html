@@ -1,12 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>WEB AKSAL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Struktur Organisasi</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CARD */
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2a5298;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+}
+
+.card p {
+    margin: 0;
+    color: gray;
+}
+
+/* LEVEL */
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+</style>
 </head>
 
 <body>
-    <h1>AKSAL GANTENG</h1>
-    <p>Ini web pertama AKSAL di GitHub Pages.</p>
-</body>
 
+<div class="header">
+    <h1>Struktur Organisasi</h1>
+    <p>Perusahaan / Sekolah / Tim Anda</p>
+</div>
+
+<div class="container">
+
+    <!-- DIREKTUR -->
+    <div class="row">
+
+        <div class="card">
+            <img src="foto1.jpg">
+            <h3>Nama Direktur</h3>
+            <p>Direktur</p>
+        </div>
+
+    </div>
+
+    <!-- MANAGER -->
+    <div class="row">
+
+        <div class="card">
+            <img src="foto2.jpg">
+            <h3>Nama Manager 1</h3>
+            <p>Manager</p>
+        </div>
+
+        <div class="card">
+            <img src="foto3.jpg">
+            <h3>Nama Manager 2</h3>
+            <p>Manager</p>
+        </div>
+
+    </div>
+
+    <!-- STAFF -->
+    <div class="row">
+
+        <div class="card">
+            <img src="foto4.jpg">
+            <h3>Nama Staff 1</h3>
+            <p>Staff</p>
+        </div>
+
+        <div class="card">
+            <img src="foto5.jpg">
+            <h3>Nama Staff 2</h3>
+            <p>Staff</p>
+        </div>
+
+        <div class="card">
+            <img src="foto6.jpg">
+            <h3>Nama Staff 3</h3>
+            <p>Staff</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
 </html>
