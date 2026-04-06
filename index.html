@@ -2,8 +2,6 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Struktur Organisasi</title>
 
 <style>
@@ -12,144 +10,125 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #1e3c72, #2a5298);
     margin: 0;
-    padding: 20px;
+    padding: 30px;
+}
+
+/* JUDUL */
+.title {
     text-align: center;
-}
-
-h1 {
     color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
 }
 
-/* DIREKTUR & MANAGER */
-
-.top-section {
-    background: white;
-    margin: 20px 2cm;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-}
-
-.top-card {
+/* CARD DIREKTUR */
+.director-card {
+    width: 700px;
+    margin: auto;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    border-radius: 18px;
+    padding: 20px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-.top-card img {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
-    object-fit: cover;
-    border: 2px solid #2a5298;
+.director-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    margin-right: 20px;
+    border: 3px solid white;
 }
 
-.top-text {
-    text-align: left;
+.director-name {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.top-text h2 {
-    margin: 0;
-    font-size: 20px;
-}
-
-.top-text p {
-    margin: 3px 0 0;
-    font-size: 14px;
-    color: gray;
-}
-
-/* CARD */
-
-.card {
+.badge {
+    background: #000;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
     display: inline-block;
-    background: white;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
-    width: 150px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    margin-bottom: 5px;
 }
 
-.card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #2a5298;
-}
-
+/* GARIS */
 .line {
     width: 2px;
-    height: 40px;
+    height: 60px;
     background: white;
-    margin: auto;
+    margin: 20px auto;
 }
 
-.horizontal-line {
-    width: 80%;
-    height: 2px;
-    background: white;
+/* CARD GM */
+.gm-card {
+    width: 650px;
     margin: auto;
-}
-
-.row {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    border-radius: 16px;
+    padding: 18px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-.section-title {
-    color: white;
-    margin-top: 30px;
+.gm-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    margin-right: 18px;
+    border: 3px solid white;
+}
+
+.gm-name {
+    font-size: 22px;
+    font-weight: bold;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<h1>STRUKTUR ORGANISASI PROCUREMENT</h1>
+<div class="title">
+STRUKTUR ORGANISASI PROCUREMENT
+</div>
 
 <!-- DIREKTUR -->
+<div class="director-card">
 
-<div class="top-section">
+<img src="direktur.jpg">
 
-<div class="top-card">
-
-<img src="Direktur.jpeg">
-
-<div class="top-text">
-<h2>AKSAL</h2>
-<p>Direktur Utama</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="line"></div>
-
-<!-- MANAGER -->
-
-<div class="top-section">
-
-<div class="top-card">
-
-<img src="Manager.jpeg">
-
-<div class="top-text">
-<h2>FRANK</h2>
-<p>General Manager</p>
-</div>
-
+<div>
+<div class="badge">DIRECTOR</div>
+<div class="director-name">AKSAL</div>
+<div>Direktur Utama</div>
 </div>
 
 </div>
 
 <div class="line"></div>
 
+<!-- GENERAL MANAGER -->
+<div class="gm-card">
+
+<img src="gm.jpg">
+
+<div>
+<div class="badge">GENERAL MANAGER</div>
+<div class="gm-name">FRANK</div>
+<div>General Manager</div>
+</div>
+
+</div>
+
+</body>
+</html>
 <!-- KEPALA BAGIAN -->
 
 <div class="horizontal-line"></div>
