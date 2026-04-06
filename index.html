@@ -102,32 +102,37 @@ body {
     font-weight: bold;
 }
 
-/* ===== CARD ===== */
-
-/* TRANSITION */
-.card {
+/* HOVER DIRECTOR */
+.director-card {
     transition: all 0.3s ease;
 }
 
-/* HOVER SEMUA CARD */
-.card:hover {
-    border: 2px solid #4da6ff;
+.director-card:hover {
+
+    transform: translateY(-8px);
 
     box-shadow:
-        0 0 15px rgba(77,166,255,0.8),
+        0 0 20px rgba(255,215,0,0.8),
         0 10px 30px rgba(0,0,0,0.4);
+
 }
 
-/* HOVER DIREKTUR */
-.card.direktur:hover {
-    transform: scale(1.1) translateY(-8px);
+/* HOVER GM */
+.gm-card {
+    transition: all 0.3s ease;
 }
 
-/* HOVER MANAGER */
-.card.manager:hover {
-    transform: scale(1.05) translateY(-8px);
+.gm-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 0 20px rgba(77,166,255,0.8),
+        0 10px 30px rgba(0,0,0,0.4);
+
 }
-    
+
+/* ===== CARD ===== */    
 /* CARD NORMAL */
 .card {
     display: inline-block;
