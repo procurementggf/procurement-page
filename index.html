@@ -104,6 +104,40 @@ body {
 
 /* ===== CARD ===== */
 
+/* TRANSITION */
+.card,
+.direktur,
+.manager {
+    transition: all 0.3s ease;
+}
+
+/* HOVER SEMUA CARD */
+.card:hover {
+    border: 2px solid #4da6ff;
+
+    box-shadow:
+        0 0 15px rgba(77,166,255,0.8),
+        0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* DIREKTUR */
+.direktur {
+    transform: scale(1.1);
+}
+
+.direktur:hover {
+    transform: scale(1.1) translateY(-8px);
+}
+
+/* MANAGER */
+.manager {
+    transform: scale(1.05);
+}
+
+.manager:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+    
 /* CARD NORMAL */
 .card {
     display: inline-block;
