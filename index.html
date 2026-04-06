@@ -98,13 +98,18 @@ body {
 
 .card {
     display: inline-block;
-    background: white;
+
+    background: rgba(255, 255, 255, 0.85); /* transparan sedikit */
+
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px); /* untuk browser Edge/Chrome */
+
     border-radius: 15px;
     padding: 15px;
     margin: 10px;
     width: 150px;
+
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    text-align: center;
 }
 
 /* FOTO DALAM CARD */
@@ -115,6 +120,21 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #2a5298;
+}
+
+.level-card {
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.9),
+        rgba(255,255,255,0.7)
+    );
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border-radius: 20px;
+    padding: 20px;
 }
 
 /* GARIS VERTIKAL */
