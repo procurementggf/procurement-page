@@ -105,9 +105,7 @@ body {
 /* ===== CARD ===== */
 
 /* TRANSITION */
-.card,
-.direktur,
-.manager {
+.card {
     transition: all 0.3s ease;
 }
 
@@ -120,21 +118,23 @@ body {
         0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* DIREKTUR */
+/* DIREKTUR NORMAL */
 .direktur {
     transform: scale(1.1);
 }
 
-.direktur:hover {
-    transform: scale(1.1) translateY(-8px);
-}
-
-/* MANAGER */
+/* MANAGER NORMAL */
 .manager {
     transform: scale(1.05);
 }
 
-.manager:hover {
+/* HOVER DIREKTUR */
+.card.direktur:hover {
+    transform: scale(1.1) translateY(-8px);
+}
+
+/* HOVER MANAGER */
+.card.manager:hover {
     transform: scale(1.05) translateY(-8px);
 }
     
