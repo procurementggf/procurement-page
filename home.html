@@ -8,57 +8,98 @@
 
 <style>
 
-/* Background */
+/* Background utama profesional */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    /* Background gradient modern */
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    height: 100vh;
     color: white;
     text-align: center;
 }
 
-/* Header */
-.header {
-    background-color: rgba(0,0,0,0.3);
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
+/* Tambahan efek cahaya transparan */
+body::before {
+    content: "";
+    position: fixed;
+    top: -100px;
+    left: -100px;
+
+    width: 500px;
+    height: 500px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.15),
+        transparent 70%
+    );
+
+    z-index: 0;
 }
 
-/* Container */
+/* Container utama */
 .container {
-    margin-top: 80px;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
 }
 
-/* Judul */
+/* Judul besar */
 .title {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* Subjudul */
+/* Subtitle */
 .subtitle {
     font-size: 18px;
     margin-bottom: 50px;
+    opacity: 0.9;
 }
 
-/* Button */
+/* Button modern */
 .menu-button {
-    background-color: white;
-    color: #2a5298;
-    padding: 15px 30px;
+    background: linear-gradient(
+        45deg,
+        #00c6ff,
+        #0072ff
+    );
+
+    color: white;
+    padding: 15px 35px;
     margin: 15px;
+
     border: none;
     border-radius: 12px;
+
     font-size: 18px;
+    font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
 }
 
-/* Hover Button */
+/* Hover efek */
 .menu-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Header */
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
 }
 
 /* Footer */
@@ -66,9 +107,11 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
-    padding: 10px;
+
+    padding: 12px;
     font-size: 14px;
+
+    background: rgba(0,0,0,0.2);
 }
 
 </style>
