@@ -78,17 +78,25 @@ body.dark {
 /* SEARCH */
 .search-container {
     position: relative;
-    width: 320px;
-    margin: 20px auto;
-}
 
+    width: 100%;
+    max-width: 320px;
+
+    margin: 20px auto;
+
+    display: flex;
+    justify-content: center;
+}
 /* SEARCH INPUT */
 .search-container input {
     width: 100%;
-    padding: 15px 50px;
+
+    padding: 15px 20px 15px 50px;
+
     border-radius: 40px;
     border: none;
     outline: none;
+
     font-size: 16px;
 
     box-shadow: 0 6px 18px rgba(0,0,0,0.3);
@@ -97,11 +105,10 @@ body.dark {
 /* SEARCH ICON */
 .search-icon {
     position: absolute;
-    left: 15px;
-    top: 14px;
-    font-size: 18px;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
 }
-
 /* DROPDOWN */
 .suggestions {
     position: absolute;
