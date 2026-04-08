@@ -13,6 +13,11 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
 }
 
 /* LIGHT MODE */
@@ -51,8 +56,10 @@ body.dark {
 /* CONTAINER */
 .container {
     text-align: center;
-    margin-top: 60px; /* diperbaiki */
+    margin-top: 60px;
     padding: 20px;
+
+    flex: 1; /* penting supaya footer turun */
 }
 
 /* TITLE */
@@ -197,12 +204,11 @@ body.dark .suggestions div:hover {
 
 /* FOOTER */
 .footer {
-    margin-top: 40px;
     padding: 12px;
     font-size: 14px;
+
     background: rgba(0,0,0,0.2);
 }
-
 </style>
 
 </head>
