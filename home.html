@@ -244,6 +244,24 @@ body.light {
         background-position: 0% 50%;
     }
 
+body.dark::before {
+    content: "";
+
+    position: fixed;
+
+    top: -200px;
+    left: -200px;
+
+    width: 600px;
+    height: 600px;
+
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.05),
+        transparent 70%
+    );
+
+    z-index: 0;
 }
 
 </style>
