@@ -8,6 +8,43 @@
 
 <style>
 
+/* CLOCK & DATE */
+.clock-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    padding: 10px 18px;
+    border-radius: 12px;
+
+    font-size: 14px;
+    text-align: right;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .clock-container {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* JAM */
+#clock {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* TANGGAL */
+#date {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
 /* RESET */
 body {
     margin: 0;
@@ -289,6 +326,12 @@ body.dark {
 🌙 Dark Mode
 </div>
 
+<!-- CLOCK & DATE -->
+<div class="clock-container">
+    <div id="date"></div>
+    <div id="clock"></div>
+</div>
+
 <div class="container">
 
 <div class="title">
@@ -414,6 +457,38 @@ body.classList.toggle("light");
 }
 
 </script>
+
+<script>
+
+function updateClock() {
+
+    const now = new Date();
+
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById("clock").innerHTML =
+        hours + ":" + minutes + ":" + seconds;
+
+    let options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+    document.getElementById("date").innerHTML =
+        now.toLocaleDateString('id-ID', options);
+
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+</script>
+
+</body>
 
 </body>
 </html>
