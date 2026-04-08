@@ -33,7 +33,8 @@ body.light {
 
 /* DARK MODE */
 body.dark {
-    animation: gradientMove 2s linear infinite;
+    background: #121212;
+    color: white;
 }
 
 /* DARK MODE BUTTON */
@@ -260,6 +261,21 @@ body.dark {
         background-position: 0% 50%;
     }
 
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
 
 </style>
 
