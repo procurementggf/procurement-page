@@ -375,85 +375,63 @@ body.dark {
 
 }
 
-/* WELCOME PALING ATAS */
+/* RUNNING TEXT PALING ATAS */
 
-.top-welcome {
+.running-text-container {
     width: 100%;
-    text-align: center;
-    padding: 25px 10px 15px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 2px solid #00c6ff;
+    padding: 8px 0;
 }
 
-/* Tulisan utama */
+/* Teks berjalan */
 
-#typing-text {
-    font-size: 34px;
-    font-weight: bold;
+.running-text {
+    display: inline-block;
+    white-space: nowrap;
     color: white;
+    font-size: 20px;
+    font-weight: bold;
     letter-spacing: 2px;
+
+    animation: runText 18s linear infinite;
 }
 
-/* Garis animasi bawah */
+/* Animasi jalan */
 
-.welcome-line {
-    width: 0;
-    height: 3px;
-    background: #00c6ff;
-    margin: 10px auto 0;
-    border-radius: 5px;
-    animation: lineGrow 2s forwards;
-}
+@keyframes runText {
 
-/* Cursor kedip */
-
-.typing::after {
-    content: "|";
-    animation: blink 1s infinite;
-}
-
-/* Animasi garis */
-
-@keyframes lineGrow {
     from {
-        width: 0;
+        transform: translateX(100%);
     }
+
     to {
-        width: 250px;
+        transform: translateX(-100%);
     }
-}
 
-/* Cursor blink */
-
-@keyframes blink {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 /* Responsive HP */
 
 @media (max-width: 600px) {
 
-    #typing-text {
-        font-size: 22px;
-    }
-
-    .welcome-line {
-        width: 180px;
+    .running-text {
+        font-size: 14px;
+        animation: runText 14s linear infinite;
     }
 
 }
-
 </style>
 
 </head>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="running-text-container">
 
-<body class="light">
+    <div class="running-text">
+        SELAMAT DATANG DI PROCUREMENT PORTAL | PT GREAT GIANT FOODS | PROCUREMENT SYSTEM PORTAL
+    </div>
 
-<div class="top-welcome">
-    <h1 id="typing-text"></h1>
-    <div class="welcome-line"></div>
 </div>
 
 <!-- DARK MODE BUTTON -->
@@ -624,44 +602,6 @@ updateClock();
 </script>
 
 </body>
-
-<script>
-const text = "SELAMAT DATANG DI PROCUREMENT PORTAL";
-const subtext = "PT GREAT GIANT FOODS";
-
-let index = 0;
-let subIndex = 0;
-
-const typingElement = document.getElementById("typing-text");
-const subTypingElement = document.getElementById("typing-subtext");
-
-typingElement.classList.add("typing-cursor");
-
-function typeMainText() {
-    if (index < text.length) {
-        typingElement.innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeMainText, 50);
-    } else {
-        typingElement.classList.remove("typing-cursor");
-        typeSubText();
-    }
-}
-
-function typeSubText() {
-    subTypingElement.classList.add("typing-cursor");
-
-    if (subIndex < subtext.length) {
-        subTypingElement.innerHTML += subtext.charAt(subIndex);
-        subIndex++;
-        setTimeout(typeSubText, 40);
-    } else {
-        subTypingElement.classList.remove("typing-cursor");
-    }
-}
-
-window.onload = typeMainText;
-</script>
 
 </body>
 </html>
