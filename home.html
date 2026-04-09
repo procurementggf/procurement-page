@@ -57,7 +57,10 @@ body {
     min-height: 100vh;
 }
     
+/* ============================= */
 /* LIGHT MODE */
+/* ============================= */
+
 body.light {
     background: linear-gradient(
         -45deg,
@@ -68,25 +71,67 @@ body.light {
     );
 
     background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
+    animation: gradientLight 12s ease infinite;
 
     color: white;
 }
 
-/* DARK MODE */
+/* ============================= */
+/* DARK MODE (NEW GRADIENT) */
+/* ============================= */
+
 body.dark {
-    background: #121212;
+    background: linear-gradient(
+        -45deg,
+        #0a0a0a,
+        #121212,
+        #1a1a2e,
+        #16213e
+    );
+
+    background-size: 400% 400%;
+    animation: gradientDark 18s ease infinite;
+
     color: white;
 }
 
-/* ANIMATION */
-@keyframes gradientMove {
+/* ============================= */
+/* LIGHT ANIMATION */
+/* ============================= */
 
-    0% { background-position: 0% 50%; }
+@keyframes gradientLight {
 
-    50% { background-position: 100% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
 
-    100% { background-position: 0% 50%; }
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+/* ============================= */
+/* DARK ANIMATION */
+/* ============================= */
+
+@keyframes gradientDark {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 
 }
 
