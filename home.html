@@ -375,64 +375,9 @@ body.dark {
 
 }
 
-/* RUNNING TEXT PALING ATAS */
-
-.running-text-container {
-    width: 100%;
-    overflow: hidden;
-    background: rgba(0,0,0,0.3);
-    border-bottom: 2px solid #00c6ff;
-    padding: 8px 0;
-}
-
-/* Teks berjalan */
-
-.running-text {
-    display: inline-block;
-    white-space: nowrap;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    animation: runText 18s linear infinite;
-}
-
-/* Animasi jalan */
-
-@keyframes runText {
-
-    from {
-        transform: translateX(100%);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-
-}
-
-/* Responsive HP */
-
-@media (max-width: 600px) {
-
-    .running-text {
-        font-size: 14px;
-        animation: runText 14s linear infinite;
-    }
-
-}
 </style>
 
 </head>
-
-<div class="running-text-container">
-
-    <div class="running-text">
-        SELAMAT DATANG DI PROCUREMENT PORTAL | PT GREAT GIANT FOODS | PROCUREMENT SYSTEM PORTAL
-    </div>
-
-</div>
 
 <!-- DARK MODE BUTTON -->
 <div class="toggle-mode" onclick="toggleMode()">
