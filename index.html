@@ -8,7 +8,6 @@
 
 body {
     font-family: Arial, sans-serif;
-
     margin: 0;
     padding: 40px;
     min-height: 100vh;
@@ -34,23 +33,7 @@ body {
     margin-bottom: 40px;
 }
 
-.card-manager {
-    width: 240px;   /* ukuran card */
-    max-width: 240px;
-
-    padding: 15px;
-    border-radius: 18px;
-
-    background: linear-gradient(
-        to right,
-        #6dd5ed,
-        #2193b0
-    );
-
-    text-align: left;
-}
-    
-/* CARD DIREKTUR */
+/* DIRECTOR */
 .director-card {
     width: 900px;
     margin: auto;
@@ -59,7 +42,6 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .director-card img {
@@ -93,7 +75,7 @@ body {
     margin: 20px auto;
 }
 
-/* CARD GM */
+/* GM */
 .gm-card {
     width: 800px;
     margin: auto;
@@ -102,7 +84,6 @@ body {
     padding: 18px;
     display: flex;
     align-items: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 .gm-card img {
@@ -118,85 +99,104 @@ body {
     font-weight: bold;
 }
 
-/* HOVER DIRECTOR */
-.director-card {
-    transition: all 0.3s ease;
+/* ===== MANAGER ===== */
+
+.manager-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-.director-card:hover {
+.manager-card {
 
-    transform: translateY(-8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    box-shadow:
-        0 0 20px rgba(255,215,0,0.8),
-        0 10px 30px rgba(0,0,0,0.4);
+    width: 800px;
+    max-width: 90%;
 
+    padding: 20px 25px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        to right,
+        #6dd5ed,
+        #5a8dee
+    );
 }
 
-/* HOVER GM */
-.gm-card {
-    transition: all 0.3s ease;
+.manager-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.gm-card:hover {
+.foto-kotak {
 
-    transform: translateY(-8px);
+    width: 70px;
+    height: 70px;
 
-    box-shadow:
-        0 0 20px rgba(77,166,255,0.8),
-        0 10px 30px rgba(0,0,0,0.4);
+    border-radius: 12px;
 
+    border: 2px solid white;
+
+    overflow: hidden;
 }
 
-/* ===== CARD ===== */    
-/* CARD NORMAL */
-.card {
+.foto-kotak img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.label-manager {
+
+    background: black;
+    color: white;
+
+    padding: 3px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
     display: inline-block;
 
+    margin-bottom: 4px;
+}
+
+.manager-text h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.manager-text p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* GARIS HORIZONTAL */
+
+.horizontal-line {
+    width: 80%;
+    height: 2px;
+    background: white;
+    margin: 40px auto 20px auto;
+}
+
+/* CARD BAWAH */
+
+.card {
+    display: inline-block;
     background: rgba(255,255,255,0.95);
-
     border-radius: 18px;
-
     padding: 15px;
     margin: 12px;
-
     width: 180px;
-
     text-align: center;
-
-    border: 2px solid rgba(255,255,255,0.3);
-
-    transition: all 0.3s ease;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
-/* SAAT KURSOR MENYENTUH */
-.card:hover {
-
-    border: 2px solid #ffffff; /* border lebih terang */
-
-    box-shadow:
-        0 12px 30px rgba(255,255,255,0.4),
-        0 15px 35px rgba(0,0,0,0.4);
-
-    transform: translateY(-6px); /* naik sedikit */
-}
-/* FOTO RATA TENGAH */
-.card img {
-    width: 90px;
-    height: 90px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    display: block;       /* ⭐ penting */
-    margin: 0 auto 12px;  /* ⭐ center horizontal */
-
-    border: 3px solid #2a5298;
-}
-/* FOTO DALAM CARD */
 
 .card img {
     width: 80px;
@@ -206,33 +206,11 @@ body {
     border: 3px solid #2a5298;
 }
 
-/* GARIS VERTIKAL */
-
-.line {
-    width: 2px;
-    height: 60px; /* tambah panjang garis */
-    background: white;
-    margin: 20px auto; /* tambah jarak atas bawah */
-}
-
-/* GARIS HORIZONTAL */
-
-.horizontal-line {
-    width: 80%;
-    height: 2px;
-    background: white;
-    margin: 40px auto 20px auto; 
-}
-
-/* BARIS CARD */
-
 .row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px; /* jarak dari garis */
 }
-/* JUDUL SECTION */
 
 .section-title {
     text-align: center;
@@ -249,15 +227,22 @@ body {
 STRUKTUR ORGANISASI PROCUREMENT
 </div>
 
-<!-- DIREKTUR -->
+<!-- DIRECTOR -->
+
 <div class="director-card">
 
 <img src="DIREKTUR.jpeg">
 
 <div>
+
 <div class="badge">DIRECTOR</div>
-<div class="director-name">RICHARD A.</div>
+
+<div class="director-name">
+RICHARD A.
+</div>
+
 <div>Direktur Utama</div>
+
 </div>
 
 </div>
@@ -265,76 +250,100 @@ STRUKTUR ORGANISASI PROCUREMENT
 <div class="line"></div>
 
 <!-- GENERAL MANAGER -->
+
 <div class="gm-card">
 
 <img src="gm.jpg">
 
-<div class="manager-card">
+<div>
 
-    <!-- Manager 1 -->
-    <div class="manager-item">
+<div class="badge">GENERAL MANAGER</div>
 
-        <div class="foto-kotak">
-            <img src="foto1.png">
-        </div>
-
-        <div class="manager-text">
-            <span class="label-manager">
-                MANAGER
-            </span>
-
-            <h3>M. AQOMA</h3>
-
-            <p>
-                DATA MANAGEMENT CONTROL &
-                SYSTEM DEPT HEAD
-            </p>
-        </div>
-
-    </div>
-
-    <!-- Manager 2 -->
-    <div class="manager-item">
-
-        <div class="manager-text">
-            <span class="label-manager">
-                MANAGER
-            </span>
-
-            <h3>ADZANI WARDHANA</h3>
-
-            <p>
-                CATEGORY OPERATION
-                SUB DIVISION HEAD
-            </p>
-        </div>
-
-    </div>
-
-    <!-- Manager 3 -->
-    <div class="manager-item">
-
-        <div class="manager-text">
-            <span class="label-manager">
-                MANAGER
-            </span>
-
-            <h3>ERYK W</h3>
-
-            <p>
-                CATEGORY EXPERT
-            </p>
-        </div>
-
-    </div>
+<div class="gm-name">
+GENERAL MANAGER PROCUREMENT
+</div>
 
 </div>
 
-<!-- KEPALA BAGIAN -->
+</div>
+
+<div class="line"></div>
+
+<!-- MANAGER -->
+
+<div class="manager-wrapper">
+
+<div class="manager-card">
+
+<div class="manager-item">
+
+<div class="foto-kotak">
+<img src="foto1.png">
+</div>
+
+<div class="manager-text">
+
+<span class="label-manager">
+MANAGER
+</span>
+
+<h3>M. AQOMA</h3>
+
+<p>
+DATA MANAGEMENT CONTROL &
+SYSTEM DEPT HEAD
+</p>
+
+</div>
+
+</div>
+
+<div class="manager-item">
+
+<div class="manager-text">
+
+<span class="label-manager">
+MANAGER
+</span>
+
+<h3>ADZANI WARDHANA</h3>
+
+<p>
+CATEGORY OPERATION
+SUB DIVISION HEAD
+</p>
+
+</div>
+
+</div>
+
+<div class="manager-item">
+
+<div class="manager-text">
+
+<span class="label-manager">
+MANAGER
+</span>
+
+<h3>ERYK W</h3>
+
+<p>
+CATEGORY EXPERT
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 <div class="horizontal-line"></div>
 
-<h2 class="section-title">SUB DIVISION HEAD</h2>
+<h2 class="section-title">
+SUB DIVISION HEAD
+</h2>
 
 <div class="row">
 
@@ -352,304 +361,11 @@ STRUKTUR ORGANISASI PROCUREMENT
 
 <div class="card">
 <img src="Kabag3.jpeg">
-<h3>DATA MANAGEMENT SUBDEPT HEADT</h3>
+<h3>DATA MANAGEMENT SUBDEPT HEAD</h3>
 <h3>Budi Santoso</h3>
 </div>
 
 </div>
 
-<!-- SR. SPECIALIST -->
-
-<div class="horizontal-line"></div>
-
-<h2 class="section-title">SR. SPECIALIST</h2>
-
-<div class="row">
-
-<div class="card">
-<img src="Kabag1.jpeg">
-<h3>SR. CATEGORY EXPERT COAL, TINPLATE, & SUGAR</h3>
-<h3>ANI TARLIMAN</h3>
-</div>
-
-<div class="card">
-<img src="Kabag2.jpeg">
-<h3>CATEGORY EXPERT FERTILYZER & CHEMICAL</h3>
-<h3>YUSTINUS HENDRA</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>CATEGORY EXPERT CARTON & PACKAGING</h3>
-<h3>TRI ARI LESTARI</h3>
-</div>
-
-<div class="card">
-<img src="Kabag1.jpeg">
-<h3>SR. CAT. EXPERTRENTAL, CONS., TECH., PROTEIN & PLANT PRODUCT BUSINES</h3>
-<h3>SURYADI</h3>
-</div>
-
-<div class="card">
-<img src="Kabag2.jpeg">
-<h3>CATEGORY EXPERT FACTORY EQUIPMENT</h3>
-<h3>ANDREA SUPRAPTO</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>TECHNICAL ADVISOR FOR PROCUREMENT OPERATION</h3>
-<h3>AMELIA A</h3>
-</div>
-
-<div class="card">
-<img src="Kabag2.jpeg">
-<h3>PURCHASING MANAGEMENT SR. SPECIALIST</h3>
-<h3>ELFRIDA B.</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>INBOUND QUALITY MANAGEMENT LEAD</h3>
-<h3>MAULANA S.</h3>
-</div>
-
-<div class="card">
-<img src="Kabag1.jpeg">
-<h3>OPERATION AREA FEP MANAGEMENT SR. SPECIALIST</h3>
-<h3>SUSWANTORO</h3>
-</div>
-
-<div class="card">
-<img src="Kabag2.jpeg">
-<h3>PROCUREMENT OPERATION SR. SPECIALIST</h3>
-<h3>HUNG TJUNGSIN</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>SOP & SYSTEM MGT SR. SPECIALIST</h3>
-<h3>AYU T</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>PROCUREMENT STRATEGY & ANALYSIS EXPERT</h3>
-<h3>ARI TRI L</h3>
-</div>
-
-<div class="card">
-<img src="Kabag3.jpeg">
-<h3>PROCUREMENT STRATEGY & ANALYSIS SR. SPC</h3>
-<h3>NADIA A, LEAP</h3>
-</div>
-
-</div>
-
-<!-- STAFF -->
-
-<h2 class="section-title">CATEGORY EXPERT</h2>
-
-<div class="row">
-
-<div class="card">
-<img src="Staff1.jpeg">
-<h3>INVANDER LIM</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff2.jpeg">
-<h3>CHANDRA P</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff3.jpeg">
-<h3>VERANIKA</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff4.jpeg">
-<h3>SHINTIA</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff5.jpeg">
-<h3>NIDYA</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff6.jpeg">
-<h3>SITI A</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff8.jpeg">
-<h3>ILMA H</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff6.jpeg">
-<h3>WAHID</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff7.jpeg">
-<h3>NINA</h3>
-<p>CATEGORY SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff8.jpeg">
-<h3>BUNGA</h3>
-<p>CATEGORY EXPERT SR. SPECIALIST</p>
-</div>
-
-</div>
-
-<!-- STAFF -->
-
-<h2 class="section-title">CATEGORY OPERATION</h2>
-
-<div class="row">
-
-<div class="card">
-<img src="Staff9.jpeg">
-<h3>ADIGUNA</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff10.jpeg">
-<h3>MS</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff11.jpeg">
-<h3>OVINDHA</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff12.jpeg">
-<h3>SRI WAHYUNI</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff13.jpeg">
-<h3>SISWI</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff14.jpeg">
-<h3>SETO P</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff15.jpeg">
-<h3>YANS'S</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff16.jpeg">
-<h3>YUSTIKA</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff16.jpeg">
-<h3>GHINA</h3>
-<p>ORDER MANAGEMENT & DELIVERY POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff10.jpeg">
-<h3>NITA KARMELIA</h3>
-<p>PURCHASING MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff11.jpeg">
-<h3>DWI PUSPITASARI</h3>
-<p>PURCHASING MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff12.jpeg">
-<h3>MUDIYANTO</h3>
-<p>INBOUNG QUALITY MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff13.jpeg">
-<h3>IRVAN EKO</h3>
-<p>INBOUNG QUALITY MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff14.jpeg">
-<h3>AGUS S</h3>
-<p>INBOUNG QUALITY MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff15.jpeg">
-<h3>HEPPY M</h3>
-<p>INBOUNG QUALITY MANAGEMENT POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff16.jpeg">
-<h3>ADITHYA</h3>
-<p>OPERATION AREA FEP POOL</p>
-</div>
-
-<div class="card">
-<img src="Staff16.jpeg">
-<h3>M. FADHULLAH</h3>
-<p>OPERATION AREA FEP POOL</p>
-</div>
-
-</div>
-
-<!-- STAFF -->
-
-<h2 class="section-title">CATEGORY SUPPORT & DATA MGT</h2>
-
-<div class="row">
-
-<div class="card">
-<img src="Staff1.jpeg">
-<h3>FANDIKHA</h3>
-<p>DATA MANAGEMENT SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff2.jpeg">
-<h3>WILDAN</h3>
-<p>DATA MANAGEMENT SPECIALIST</p>
-</div>
-
-<div class="card">
-<img src="Staff3.jpeg">
-<h3>ISMA</h3>
-<p>DATA MANAGEMENT SPECIALIST</p>
-</div>
-
-</div>
-
-    
 </body>
 </html>
