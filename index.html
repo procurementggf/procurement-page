@@ -223,6 +223,45 @@ body {
     color: white;
     margin-top: 30px;
 }
+
+.manager-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* jarak antar card */
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card-manager {
+    width: 260px;
+    padding: 20px;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        to right,
+        #6dd5ed,
+        #2193b0
+    );
+
+    text-align: left;
+}
+
+.foto-manager {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    border: 3px solid white;
+}
+
+.label-manager {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+}
     
 </style>
 </head>
@@ -253,23 +292,52 @@ STRUKTUR ORGANISASI PROCUREMENT
 
 <img src="gm.jpg">
 
-<div>
-<div class="badge">MANAGER</div>
-<div class="gm-name">M. AQOMA</div>
-<div>DATA MANAGEMENT CONTROL & SYSTEM DEPT HEAD</div>
-</div>
+<!-- CONTAINER MANAGER -->
+<div class="manager-container">
 
-<div>
-<div class="badge">MANAGER</div>
-<div class="gm-name">ADZANI WARDHANA</div>
-<div>CATEGORY OPERATION SUB DIVISION HEAD</div>
-</div>
+    <!-- Manager 1 -->
+    <div class="card-manager">
+        <img src="foto1.png" class="foto-manager">
 
-<div>
-<div class="badge">MANAGER</div>
-<div class="gm-name">ERYK W</div>
-<div>CATEGORY EXPERT</div>
-</div>
+        <span class="label-manager">
+            MANAGER
+        </span>
+
+        <h3>M. AQOMA</h3>
+        <p>
+            DATA MANAGEMENT CONTROL &
+            SYSTEM DEPT HEAD
+        </p>
+    </div>
+
+    <!-- Manager 2 -->
+    <div class="card-manager">
+        <img src="foto2.png" class="foto-manager">
+
+        <span class="label-manager">
+            MANAGER
+        </span>
+
+        <h3>ADZANI WARDHANA</h3>
+        <p>
+            CATEGORY OPERATION
+            SUB DIVISION HEAD
+        </p>
+    </div>
+
+    <!-- Manager 3 -->
+    <div class="card-manager">
+        <img src="foto3.png" class="foto-manager">
+
+        <span class="label-manager">
+            MANAGER
+        </span>
+
+        <h3>ERYK W</h3>
+        <p>
+            CATEGORY EXPERT
+        </p>
+    </div>
 
 </div>
 
